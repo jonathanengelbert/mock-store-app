@@ -1,0 +1,17 @@
+header {
+  background-color: var(--main-color);
+  padding: 20px;
+  //margin: 50px;
+  border-radius: 8px;
+
+  h1 {
+    //font-size: 3.5rem;
+  }
+  
+  @media (max-width: 910px) {
+    margin: 0;
+  }
+}
+
+
+

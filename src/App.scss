@@ -1,0 +1,57 @@
+main {
+  //height: 100%;
+  //width: 100%;
+  margin-top: 100px;
+}
+
+header {
+  text-align: center;
+}
+
+article {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+////////////////////////////////////////////////////////
+//GENERAL AND TYPOGRAPHY
+////////////////////////////////////////////////////////
+:root {
+  --main-color: #ff6e0c;
+  --secondary-color: #6b3aff;
+}
+
+
+
+////////////////////////////////////////////////////////
+//NAV
+////////////////////////////////////////////////////////
+
+#nav-bar {
+  background-color: white;
+}
+
+#nav-logo {
+  display: flex;
+  align-items: center;
+  max-width: 30px;
+}
+#nav.log>img {
+  padding: 7px 14px;
+  max-height: 10px;
+  max-width: 30px;
+}
+
+#nav-bar a {
+  color: #ff6e0c;
+  font-size: 20px;
+
+  &:hover{
+    color: var(--main-color);
+  }
+}
+
+////////////////////////////////////////////////////////
+//NAV
+////////////////////////////////////////////////////////
