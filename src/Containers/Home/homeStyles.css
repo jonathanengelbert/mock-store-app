@@ -2,11 +2,50 @@ header {
   background-color: var(--main-color);
   padding: 20px;
   border-radius: 8px;
+  color: white;
 }
 @media (max-width: 910px) {
   header {
     margin: 0;
   }
+}
+
+.carousel-inner img, .carousel-inner, .slide {
+  max-width: 500px;
+  max-height: 550px;
+}
+@media (min-width: 1400px) {
+  .carousel-inner img, .carousel-inner, .slide {
+    max-width: 700px;
+    max-height: 750px;
+  }
+}
+
+.carousel-container {
+  width: 40%;
+}
+
+.featured-container {
+  background-color: var(--main-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-description {
+  width: 60%;
+  height: 100%;
+  float: right;
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  border-collapse: collapse;
+  font-size: 40px;
+}
+.featured-description p:first-of-type {
+  width: 100%;
+  background-color: #ff6e0c;
+  font-size: 50px;
+  color: white;
 }
 
 /*# sourceMappingURL=homeStyles.css.map */

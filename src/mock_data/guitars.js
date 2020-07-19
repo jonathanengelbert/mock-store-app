@@ -1,7 +1,8 @@
-import testImage from "../images/test.jpg";
-import testImage2 from "../images/test2.jpg";
+import testImage from "../images/guitars/black_guitar.jpg";
+import testImage2 from "../images/guitars/lancaster.jpg";
+import testImage3 from "../images/guitars/les_paul.jpg";
 
-export const testList = [
+export const guitarsList = [
     {
         id: 1,
         image: testImage,
@@ -16,7 +17,7 @@ export const testList = [
     },
     {
         id: 3,
-        image: testImage,
+        image: testImage3,
         name: 'Last One',
         price: '$100'
     },

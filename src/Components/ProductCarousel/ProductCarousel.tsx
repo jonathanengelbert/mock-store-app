@@ -3,14 +3,6 @@ import React from 'react';
 // BOOTSTRAP
 import Carousel from 'react-bootstrap/Carousel'
 
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch,
-    useParams
-} from "react-router-dom";
 
 import {LinkContainer} from 'react-router-bootstrap'
 
@@ -20,8 +12,8 @@ const ProductCarousel = (props: any) => {
     function generateList(l: any) {
         return l.map((i: any) => {
             return (
-                <LinkContainer to={`/about`}>
-                    <Carousel.Item key={i.id}>
+                <LinkContainer to={`/products:${i.id}`} key={i.id}>
+                    <Carousel.Item>
 
                         <img
                             className="d-block w-100"
@@ -39,12 +31,9 @@ const ProductCarousel = (props: any) => {
     }
 
     return (
-        <Router>
             <Carousel>
                 {generateList(props.productList)}
             </Carousel>
-        </Router>
-
     )
 };
 

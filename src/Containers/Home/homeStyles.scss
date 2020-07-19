@@ -3,15 +3,77 @@ header {
   padding: 20px;
   //margin: 50px;
   border-radius: 8px;
+  color: white;
 
   h1 {
     //font-size: 3.5rem;
   }
-  
+
+
   @media (max-width: 910px) {
     margin: 0;
   }
 }
 
+article {
+  //background-color: #ff7e0c;
+  //padding-bottom: 20px;
+  //display: flex;
+
+  //justify-content: center;
+  //align-content: center;
+  //align-items: center;
+
+}
+
+.carousel-inner img, .carousel-inner, .slide {
+  max-width: 500px;
+  max-height: 550px;
+
+  @media (min-width: 1400px) {
+    max-width: 700px;
+    max-height: 750px;
+  }
+}
+
+
+.carousel-container {
+  width: 40%;
+}
+
+.featured-container {
+  //border:  5px solid var(--secondary-color);
+  //text-align: center;
+  background-color: var(--main-color);
+  position: relative;
+  overflow: hidden;
+  //padding: 10px;
+
+  //@media (max-width: 1400px) {
+  //  display: inline-block;
+  //  justify-content: center;
+  //  flex-wrap: wrap;
+  //}
+}
+
+.featured-description {
+  width: 60%;
+  height: 100%;
+  //background-color: red;
+  float: right;
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  border-collapse: collapse;
+  font-size: 40px;
+
+  p:first-of-type {
+    width: 100%;
+    background-color: #ff6e0c;
+    font-size: 50px;
+    color: white;
+  }
+
+}
 
 
