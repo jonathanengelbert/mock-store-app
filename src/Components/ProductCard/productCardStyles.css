@@ -2,4 +2,8 @@
   cursor: pointer;
 }
 
+.card-text {
+  font-weight: bolder;
+}
+
 /*# sourceMappingURL=productCardStyles.css.map */

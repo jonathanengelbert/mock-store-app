@@ -1,10 +1,10 @@
 import React from 'react';
 import ProductList from "../../Components/ProductList/ProductList";
-import { guitarsList } from "../../mock_data/guitars";
+import {lessonsList} from "../../mock_data/lessons";
 
-import './guitarsStyles.scss';
+import './lessonsStyles.scss';
 
-export default function Guitars() {
+export default function Lessons() {
     return (
         <div>
             <header>
@@ -13,7 +13,7 @@ export default function Guitars() {
             </header>
             <main>
                 <ProductList
-                    data={guitarsList}
+                    data={lessonsList}
                 />
 
                 <article>

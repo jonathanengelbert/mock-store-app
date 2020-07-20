@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./Containers/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import Guitars from './Containers/Guitars/Guitars';
+import Lessons from "./Containers/Lessons/Lessons";
 import About from "./Containers/About/About";
 import Register from "./Containers/Authentication/Register";
 import Login from "./Containers/Authentication/Login";
@@ -80,6 +81,7 @@ export default function App() {
 
                 <Switch>
                     <Route path="/guitars" component={Guitars}/>
+                    <Route path="/lessons" component={Lessons}/>
                     <Route path="/about" component={About}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/register" component={Register}/>

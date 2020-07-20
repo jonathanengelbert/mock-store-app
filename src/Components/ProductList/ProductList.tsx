@@ -1,17 +1,16 @@
 import React from 'react';
 import ProductCard from "../ProductCard/ProductCard";
-import {guitarsList} from '../../mock_data/guitars'
 
 import './productListStyles.scss';
 
 
-export default function ProductList() {
+export default function ProductList(props: any) {
+
 
     function generateCards() {
-        const products = guitarsList.map((p: any) => {
+       return  props.data.map((p: any) => {
             return <ProductCard key={p.id} id={p.id} name={p.name} image={p.image} price={p.price}/>
         })
-        return products;
     }
 
 
