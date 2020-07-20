@@ -43,8 +43,8 @@ export default function App() {
                             <Nav.Link>Guitars</Nav.Link>
                         </LinkContainer>
 
-                        <LinkContainer to={'/accessories'}>
-                            <Nav.Link>Accessories</Nav.Link>
+                        <LinkContainer to={'/equipment'}>
+                            <Nav.Link>Equipment</Nav.Link>
                         </LinkContainer>
 
                         <LinkContainer to={'/lessons'}>
@@ -82,7 +82,7 @@ export default function App() {
                 <Switch>
                     <Route path="/guitars" component={Guitars}/>
                     <Route path="/lessons" component={Lessons}/>
-                    <Route path="/about" component={About}/>
+                   <Route path="/about" component={About}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/register" component={Register}/>
                     <Route path="/topics">
