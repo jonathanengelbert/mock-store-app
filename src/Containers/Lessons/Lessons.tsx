@@ -8,8 +8,8 @@ export default function Lessons() {
     return (
         <div>
             <header>
-                <h1>Guitars</h1>
-                <p>No matter the style, we got you covered</p>
+                <h1>Lessons</h1>
+                <p>Lessons for any style, taught by top instructors</p>
             </header>
             <main>
                 <ProductList
