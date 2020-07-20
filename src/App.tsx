@@ -1,6 +1,9 @@
 import React from "react";
 import Home from "./Containers/Home/Home";
 import Footer from "./Components/Footer/Footer";
+import Guitars from './Containers/Guitars/Guitars';
+import Lessons from "./Containers/Lessons/Lessons";
+import Equipment from "./Containers/Equipment/Equipment";
 import About from "./Containers/About/About";
 import Register from "./Containers/Authentication/Register";
 import Login from "./Containers/Authentication/Login";
@@ -15,7 +18,7 @@ import {
 } from "react-router-dom";
 
 import {LinkContainer} from 'react-router-bootstrap'
-import logo from './images/guitar.jpg';
+import logo from './images/guitar-logo.jpg';
 
 // Bootstrap
 import Navbar from 'react-bootstrap/Navbar';
@@ -41,8 +44,8 @@ export default function App() {
                             <Nav.Link>Guitars</Nav.Link>
                         </LinkContainer>
 
-                        <LinkContainer to={'/accessories'}>
-                            <Nav.Link>Accessories</Nav.Link>
+                        <LinkContainer to={'/equipment'}>
+                            <Nav.Link>Equipment</Nav.Link>
                         </LinkContainer>
 
                         <LinkContainer to={'/lessons'}>
@@ -78,6 +81,9 @@ export default function App() {
             <main>
 
                 <Switch>
+                    <Route path="/guitars" component={Guitars}/>
+                    <Route path="/lessons" component={Lessons}/>
+                    <Route path="/equipment" component={Equipment}/>
                     <Route path="/about" component={About}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/register" component={Register}/>

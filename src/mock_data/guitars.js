@@ -21,4 +21,58 @@ export const guitarsList = [
         name: 'Last One',
         price: '$100'
     },
+    {
+        id: 1,
+        image: testImage,
+        name: 'Generic Guitar',
+        price: '$50'
+    },
+    {
+        id: 2,
+        image: testImage2,
+        name: 'Another One',
+        price: '$3000'
+    },
+    {
+        id: 3,
+        image: testImage3,
+        name: 'Last One',
+        price: '$100'
+    },
+    {
+        id: 1,
+        image: testImage,
+        name: 'Generic Guitar',
+        price: '$50'
+    },
+    {
+        id: 2,
+        image: testImage2,
+        name: 'Another One',
+        price: '$3000'
+    },
+    {
+        id: 3,
+        image: testImage3,
+        name: 'Last One',
+        price: '$100'
+    },
+    {
+        id: 1,
+        image: testImage,
+        name: 'Generic Guitar',
+        price: '$50'
+    },
+    {
+        id: 2,
+        image: testImage2,
+        name: 'Another One',
+        price: '$3000'
+    },
+    {
+        id: 3,
+        image: testImage3,
+        name: 'Last One',
+        price: '$100'
+    },
 ];

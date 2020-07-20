@@ -33,7 +33,7 @@ const Home = (props: any) => {
 
             <article className={"featured-container"}>
                 <div className={'featured-description description-left'}>
-                    <p>Latest Accesories</p>
+                    <p>Latest Equipment</p>
                     <p>Equipment for recording, producing <br/>and making your music</p>
                     <Button>Equipment Catalogue</Button>
                 </div>
