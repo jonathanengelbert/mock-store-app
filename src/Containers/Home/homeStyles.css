@@ -2,10 +2,100 @@ header {
   background-color: var(--main-color);
   padding: 20px;
   border-radius: 8px;
+  color: white;
 }
-@media (max-width: 910px) {
-  header {
-    margin: 0;
+
+.carousel-inner img, .carousel-inner, .slide {
+  max-width: 500px;
+  max-height: 550px;
+}
+@media (min-width: 1400px) {
+  .carousel-inner img, .carousel-inner, .slide {
+    min-width: 700px;
+    min-height: 750px;
+  }
+}
+@media (max-width: 880px) {
+  .carousel-inner img, .carousel-inner, .slide {
+    min-width: 100vw;
+  }
+}
+
+.carousel-container {
+  width: 40%;
+}
+
+.featured-container {
+  border-radius: 10px;
+  background: #833ab4;
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 0%, #fcb045 30%, #fc8b3b 99%);
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-description {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  border-collapse: collapse;
+  font-size: 40px;
+  padding: 10px;
+  text-align: right;
+}
+.featured-description Button {
+  background-color: var(--secondary-color);
+  font-size: 30px;
+}
+.featured-description p:first-of-type {
+  width: 100%;
+  font-size: 50px;
+  color: white;
+  border-bottom: 1px solid white;
+}
+@media (max-width: 1780px) {
+  .featured-description p {
+    font-size: 20px;
+  }
+  .featured-description p:first-of-type {
+    font-size: 30px;
+  }
+  .featured-description Button {
+    font-size: 20px;
+  }
+}
+@media (max-width: 880px) {
+  .featured-description {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.carousel-right {
+  float: right;
+  width: 700px;
+}
+@media (max-width: 1400px) {
+  .carousel-right {
+    max-width: 500px;
+  }
+}
+@media (max-width: 880px) {
+  .carousel-right {
+    float: inherit;
+    max-width: 100vw;
+  }
+}
+
+.description-left {
+  left: 5px;
+  text-align: left;
+}
+@media (max-width: 880px) {
+  .description-left {
+    text-align: center;
   }
 }
 

@@ -1,5 +1,10 @@
 import React from "react";
 import Home from "./Containers/Home/Home";
+import Footer from "./Components/Footer/Footer";
+import About from "./Containers/About/About";
+import Register from "./Containers/Authentication/Register";
+import Login from "./Containers/Authentication/Login";
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -9,14 +14,11 @@ import {
     useParams
 } from "react-router-dom";
 
-import { LinkContainer } from 'react-router-bootstrap'
+import {LinkContainer} from 'react-router-bootstrap'
 import logo from './images/guitar.jpg';
 
 // Bootstrap
 import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
 
@@ -25,13 +27,13 @@ import './App.scss';
 export default function App() {
     return (
         <Router>
-            <Navbar id="nav-bar"  expand="lg" fixed={"top"}>
+            <Navbar id="nav-bar" expand="lg" fixed={"top"}>
                 <LinkContainer to={'/'}>
                     <Navbar.Brand id={"nav-logo"}>
                         <img src={logo} alt="Minerva Logo"/>
                     </Navbar.Brand>
                 </LinkContainer>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
 
@@ -56,7 +58,7 @@ export default function App() {
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
+                            <NavDropdown.Divider/>
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
@@ -67,41 +69,31 @@ export default function App() {
                     <LinkContainer to={'/register'}>
                         <Nav.Link>Register</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to={'/register'}>
+                    <LinkContainer to={'/cart'}>
                         <Nav.Link>Cart</Nav.Link>
                     </LinkContainer>
-
-
-
-                    {/*<Form inline>*/}
-                    {/*    <FormControl type="text" placeholder="Search" className="mr-sm-2" />*/}
-                    {/*    <Button variant="outline-success">Search</Button>*/}
-                    {/*</Form>*/}
 
                 </Navbar.Collapse>
             </Navbar>
             <main>
 
                 <Switch>
-                    <Route path="/about">
-                        <About />
-                    </Route>
+                    <Route path="/about" component={About}/>
+                    <Route path="/login" component={Login}/>
+                    <Route path="/register" component={Register}/>
                     <Route path="/topics">
-                        <Topics />
+                        <Topics/>
                     </Route>
                     <Route exact path="/" component={Home}>
                     </Route>
                 </Switch>
 
             </main>
+            <Footer/>
         </Router>
     );
 }
 
-
-function About() {
-    return <h2>About</h2>;
-}
 
 function Topics() {
     let match = useRouteMatch();
@@ -127,7 +119,7 @@ function Topics() {
           the page that is shown when no topic is selected */}
             <Switch>
                 <Route path={`${match.path}/:topicId`}>
-                    <Topic />
+                    <Topic/>
                 </Route>
                 <Route path={match.path}>
                     <h3>Please select a topic.</h3>
@@ -138,6 +130,6 @@ function Topics() {
 }
 
 function Topic() {
-    let { topicId } = useParams();
+    let {topicId} = useParams();
     return <h3>Requested topic ID: {topicId}</h3>;
 }

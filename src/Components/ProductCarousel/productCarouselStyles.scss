@@ -1,9 +1,9 @@
-.slide {
-  //max-height: 50%;
-  width: 400px;
-}
+.carousel-inner img, .carousel-inner, .slide {
+  max-width: 500px;
+  max-height: 550px;
 
-.slide img {
-  width: 100%;
-  height: 500px;
+  //@media (max-width: 1400px) {
+  //  max-width: 500px;
+  //  max-height: 550px;
+  //}
 }

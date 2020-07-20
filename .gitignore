@@ -10,6 +10,7 @@
 .pnp.js
 /.idea
 ./idea
+src/images
 
 
 # testing
