@@ -1,0 +1,32 @@
+.about-container {
+  background: url(/images/mock-owner.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  overflow: auto;
+}
+
+.statement {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-shadow: none;
+  font-size: 2rem;
+  padding: 40px;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+
+  p {
+    background: rgba(0, 0, 0, .3);
+  }
+
+  @media (max-width: 1600px) {
+    width: 90%;
+  }
+}
+
+//.about-image {
+//  max-width: 80%;
+//  height: 100%;
+//  border-radius: 10px;
+//}
