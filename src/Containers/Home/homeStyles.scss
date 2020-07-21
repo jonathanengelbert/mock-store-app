@@ -26,6 +26,7 @@ header {
 
 .carousel-container {
   width: 40%;
+  cursor: pointer;
 
   //@media (max-width: 880px) {
   //  //min-width: 880px;
@@ -44,7 +45,6 @@ header {
   position: relative;
   overflow: hidden;
 }
-
 .featured-description {
   width: 60%;
   height: 100%;
@@ -68,7 +68,6 @@ header {
     color: white;
     border-bottom: 1px solid white;
   }
-
 
   @media (max-width: 1780px) {
     p {

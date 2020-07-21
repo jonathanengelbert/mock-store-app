@@ -11,7 +11,7 @@ import './homeStyles.scss';
 import Button from 'react-bootstrap/esm/Button';
 import {LinkContainer} from "react-router-bootstrap";
 
-const Home = (props: any) => {
+const Home = () => {
 
     return (
         <>
