@@ -1,16 +1,12 @@
-#footer {
-  height: 80px;
-  background-color: var(--main-color);
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+#footer-bar {
+  height: 181px;
+  color: white;
+  padding-top: 10px;
 }
-#footer p {
-  margin: 0;
+#footer-bar p:last-of-type {
+  font-size: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /*# sourceMappingURL=footerStyles.css.map */

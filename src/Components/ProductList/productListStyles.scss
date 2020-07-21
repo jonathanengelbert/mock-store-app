@@ -4,4 +4,9 @@
   grid-template-columns: repeat(auto-fill, 15rem);
   grid-gap: 10px;
   justify-content: space-around;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
 }

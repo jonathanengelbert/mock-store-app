@@ -23,6 +23,7 @@ header {
 
 .carousel-container {
   width: 40%;
+  cursor: pointer;
 }
 
 .featured-container {
