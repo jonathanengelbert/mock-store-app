@@ -4,10 +4,12 @@ import SubscribeForm from "../SubscribeForm/SubscribeForm";
 import {guitarsList} from "../../mock_data/guitars";
 import {accessoriesList} from "../../mock_data/accessories";
 import {lessonsList} from "../../mock_data/lessons";
+
 import './homeStyles.scss';
-import Button from 'react-bootstrap/esm/Button';
 
 // BOOTSTRAP
+import Button from 'react-bootstrap/esm/Button';
+import {LinkContainer} from "react-router-bootstrap";
 
 const Home = (props: any) => {
 
@@ -22,7 +24,9 @@ const Home = (props: any) => {
                 <div className={`featured-description `}>
                     <p>Featured Guitars</p>
                     <p>No matter the style, we have what you are looking for</p>
-                    <Button>Guitar Catalogue</Button>
+                    <LinkContainer to={'/guitars'}>
+                        <Button>Guitar Catalogue</Button>
+                    </LinkContainer>
                 </div>
                 <div className={"carousel-container"}>
                     <ProductCarousel
@@ -35,7 +39,9 @@ const Home = (props: any) => {
                 <div className={'featured-description description-left'}>
                     <p>Latest Equipment</p>
                     <p>Equipment for recording, producing <br/>and making your music</p>
-                    <Button>Equipment Catalogue</Button>
+                    <LinkContainer to={'/equipment'}>
+                        <Button>Equipment Catalogue</Button>
+                    </LinkContainer>
                 </div>
                 <div className={"carousel-container carousel-right"}>
                     <ProductCarousel
@@ -48,7 +54,9 @@ const Home = (props: any) => {
                 <div className={'featured-description'}>
                     <p>Lesson Packages</p>
                     <p>Individual and group lesson bundles with top instructors</p>
-                    <Button>Lessons Catalogue</Button>
+                    <LinkContainer to={'/lessons'}>
+                        <Button>Lessons Catalogue</Button>
+                    </LinkContainer>
                 </div>
                 <div className={"carousel-container"}>
                     <ProductCarousel
