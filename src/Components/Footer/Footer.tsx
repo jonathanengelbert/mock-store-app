@@ -15,6 +15,9 @@ export default function Footer() {
                         minervaguitars@nowhere.com
                     </p>
                     <p>
+                        555 Avenue X, Nowhere Town, NW, Nowhere Land
+                    </p>
+                    <p>
                         © 2020 Jonathan Engelbert
                     </p>
                 </strong>
