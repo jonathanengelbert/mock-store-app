@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/esm/Navbar';
 export default function Footer() {
     return (
         <footer id={"footer"}>
-            <Navbar id="footer-bar" bg="dark" expand="lg" sticky-bottom>
+            <Navbar id="footer-bar" bg="dark" expand="lg" sticky={"bottom"}>
                 <strong>
                     <p>
                         <a href="tel:+1-555-555-5555">+1-555-555-5555</a>
