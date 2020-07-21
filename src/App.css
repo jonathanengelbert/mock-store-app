@@ -55,4 +55,8 @@ article {
   font-weight: bolder;
 }
 
+button.navbar-toggler {
+  background-color: white;
+}
+
 /*# sourceMappingURL=App.css.map */
