@@ -36,30 +36,40 @@ article {
 ////////////////////////////////////////////////////////
 
 #nav-bar {
-  background-color: white;
+  position: relative;
+  background-color: var(--main-color);
 }
 
 #nav-logo {
   display: flex;
-  align-items: center;
-  max-width: 30px;
+  align-iwtems: center;
+  width: 100px;
 }
 
 #nav.log > img {
   padding: 7px 14px;
-  max-height: 10px;
-  max-width: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+#logo-span, #nav-bar a:hover {
+  &:hover {
+    color: white;
+  }
 }
 
 #nav-bar a {
   color: #ff6e0c;
+  color: white;
   font-size: 20px;
 
   &:hover {
-    color: var(--main-color);
+    //color: var(--main-color);
+    font-weight: bolder;
   }
+
 }
 
 ////////////////////////////////////////////////////////
-//NAV
+//NAV COLLAPSED
 ////////////////////////////////////////////////////////

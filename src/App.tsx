@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Home from "./Containers/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import Guitars from './Containers/Guitars/Guitars';
@@ -11,68 +11,67 @@ import Login from "./Containers/Authentication/Login";
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link,
-    useRouteMatch,
-    useParams
+    Route
 } from "react-router-dom";
 
 import {LinkContainer} from 'react-router-bootstrap'
-import logo from './images/guitar-logo.jpg';
+import logo from './images/favicon-32x32.png';
 
 // Bootstrap
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
 
 import './App.scss';
 
 export default function App() {
+    // The type declaration below is needed because of a typescript limitation
+    //
+    const [expanded, setExpanded] = useState<false | true>(false);
+
     return (
         <Router>
-            <Navbar id="nav-bar" expand="lg" fixed={"top"}>
-                <LinkContainer to={'/'}>
+            <Navbar id="nav-bar" expand="lg" fixed={"top"}
+                expanded={expanded}
+            >
+
+                <LinkContainer to={'/'} onClick={() => setExpanded(false)}>
                     <Navbar.Brand id={"nav-logo"}>
                         <img src={logo} alt="Minerva Logo"/>
+                        <span id={'logo-span'}>inerva</span>
                     </Navbar.Brand>
                 </LinkContainer>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Toggle
+                    aria-controls="basic-navbar-nav"
+                    onClick={() => setExpanded(expanded ? false : true)}
+                />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
 
-                        <LinkContainer to={'/guitars'}>
+                        <LinkContainer to={'/guitars'} onClick={() => setExpanded(false)}>
                             <Nav.Link>Guitars</Nav.Link>
                         </LinkContainer>
 
-                        <LinkContainer to={'/equipment'}>
+                        <LinkContainer to={'/equipment'} onClick={() => setExpanded(false)}>
                             <Nav.Link>Equipment</Nav.Link>
                         </LinkContainer>
 
-                        <LinkContainer to={'/lessons'}>
+                        <LinkContainer to={'/lessons'} onClick={() => setExpanded(false)}>
                             <Nav.Link>Lessons</Nav.Link>
                         </LinkContainer>
 
-                        <LinkContainer to={'/about'}>
+                        <LinkContainer to={'/about'} onClick={() => setExpanded(false)}>
                             <Nav.Link>About</Nav.Link>
                         </LinkContainer>
 
-
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider/>
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
                     </Nav>
 
-                    <LinkContainer to={'/login'}>
+                    <LinkContainer to={'/login'} onClick={() => setExpanded(false)}>
                         <Nav.Link>Login</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to={'/register'}>
+                    <LinkContainer to={'/register'} onClick={() => setExpanded(false)}>
                         <Nav.Link>Register</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to={'/cart'}>
+                    <LinkContainer to={'/cart'} onClick={() => setExpanded(false)}>
                         <Nav.Link>Cart</Nav.Link>
                     </LinkContainer>
 
@@ -87,9 +86,6 @@ export default function App() {
                     <Route path="/about" component={About}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/register" component={Register}/>
-                    <Route path="/topics">
-                        <Topics/>
-                    </Route>
                     <Route exact path="/" component={Home}>
                     </Route>
                 </Switch>
@@ -100,42 +96,3 @@ export default function App() {
     );
 }
 
-
-function Topics() {
-    let match = useRouteMatch();
-
-    return (
-        <div>
-            <h2>Topics</h2>
-
-            <ul>
-                <li>
-                    <Link to={`${match.url}/components`}>Components</Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/props-v-state`}>
-                        Props v. State
-                    </Link>
-                </li>
-            </ul>
-
-            {/* The Topics page has its own <Switch> with more routes
-          that build on the /topics URL path. You can think of the
-          2nd <Route> here as an "index" page for all topics, or
-          the page that is shown when no topic is selected */}
-            <Switch>
-                <Route path={`${match.path}/:topicId`}>
-                    <Topic/>
-                </Route>
-                <Route path={match.path}>
-                    <h3>Please select a topic.</h3>
-                </Route>
-            </Switch>
-        </div>
-    );
-}
-
-function Topic() {
-    let {topicId} = useParams();
-    return <h3>Requested topic ID: {topicId}</h3>;
-}
