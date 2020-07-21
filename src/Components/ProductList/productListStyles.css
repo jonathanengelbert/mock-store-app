@@ -4,5 +4,11 @@
   grid-gap: 10px;
   justify-content: space-around;
 }
+@media (max-width: 600px) {
+  .product-list-container {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
+}
 
 /*# sourceMappingURL=productListStyles.css.map */
